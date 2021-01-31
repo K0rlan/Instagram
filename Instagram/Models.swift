@@ -11,7 +11,6 @@ import UIKit
 struct Stories{
     var name: String
     var image: String
-    
 }
 
 struct Posts {
@@ -34,5 +33,5 @@ struct Posts {
         self.likes = 0
     }
     
+    
 }
-

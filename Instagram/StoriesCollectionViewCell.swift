@@ -19,10 +19,14 @@ class StoriesCollectionViewCell: UICollectionViewCell {
     }
     
     func makeImageRound(){
+        let gradient = CAGradientLayer()
+        
+        gradient.colors = [UIColor.blue.cgColor, UIColor.green.cgColor]
         imageView.layer.borderWidth = 1
         imageView.layer.masksToBounds = false
         imageView.layer.borderColor = UIColor.black.cgColor
         imageView.layer.cornerRadius = imageView.frame.height/2
         imageView.clipsToBounds = true
+        imageView.layer.addSublayer(gradient)
     }
 }

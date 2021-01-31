@@ -11,7 +11,7 @@ class StoriesTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var stories = [Stories(name: "Koko", image: "avatar1"), Stories(name: "Koko", image: "ava1"), Stories(name: "Koko", image: "ava1"), Stories(name: "Koko", image: "ava1"), Stories(name: "Koko", image: "ava1"), Stories(name: "Koko", image: "ava1"), Stories(name: "Koko", image: "ava1"), Stories(name: "Koko", image: "ava1")]
+    var stories = [Stories(name: "Koko", image: "1"), Stories(name: "Aru", image: "2"), Stories(name: "China", image: "3"), Stories(name: "Samat", image: "4"), Stories(name: "Bola", image: "5"), Stories(name: "Danik", image: "6"), Stories(name: "Yuri", image: "7")]
     
     override func awakeFromNib() {
         super.awakeFromNib()
