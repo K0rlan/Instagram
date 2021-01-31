@@ -11,9 +11,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var customNavigationBar: NavigationBarView!
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    var stories = [Stories(name: "Koko", image: "avatar1"), Stories(name: "Koko", image: "ava1"), Stories(name: "Koko", image: "ava1"), Stories(name: "Koko", image: "ava1"), Stories(name: "Koko", image: "ava1"), Stories(name: "Koko", image: "ava1"), Stories(name: "Koko", image: "ava1"), Stories(name: "Koko", image: "ava1")]
     
     var posts = [Posts(user: Stories(name: "Koko", image: "ava1"), postImage: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postImage: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postImage: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postImage: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postImage: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postImage: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postImage: "avatar1", postText: "kanfl")]
     
@@ -23,12 +20,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         customNavigationBar.delegate = self
         likes = [String](repeating: "heart", count: self.posts.count)
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionView.isScrollEnabled = true
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
@@ -47,13 +38,18 @@ extension ViewController: NavBarDelegate{
    
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
+extension ViewController:  UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cells", for: indexPath) as!
+                StoriesTableViewCell
+            return cell
+        }else {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as!
             PostsTableViewCell
         let post = posts[indexPath.row]
@@ -69,19 +65,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         cell.likeLabel.text = "Нравится: \(post.likes)"
         
         return cell
-    }
-   
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        stories.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! StoriesCollectionViewCell
-        let story = stories[indexPath.row]
-        cell.imageView.image = UIImage(named: story.image)
-        cell.textLabel.text = story.name
-        
-        return cell
+        }
     }
    
     @objc func likeButtonPressed(sender: UIButton){
