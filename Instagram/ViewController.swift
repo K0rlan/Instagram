@@ -7,12 +7,13 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var customNavigationBar: NavigationBarView!
     
-    var posts = [Posts(user: Stories(name: "Koko", image: "ava1"), postImage: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postImage: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postImage: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postImage: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postImage: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postImage: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postImage: "avatar1", postText: "kanfl")]
+    var posts = [Posts(user: Stories(name: "Koko", image: "ava1"), postString: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postString: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postString: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postString: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postString: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postString: "avatar1", postText: "kanfl"), Posts(user: Stories(name: "Koko", image: "ava1"), postString: "avatar1", postText: "kanfl")]
     
     var likes: [String] = []
     
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         customNavigationBar.delegate = self
         likes = [String](repeating: "heart", count: self.posts.count)
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
@@ -53,7 +55,7 @@ extension ViewController:  UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as!
             PostsTableViewCell
         let post = posts[indexPath.row]
-        cell.postImageView.image = UIImage(named: post.postImage)
+        cell.postImageView.image = post.postImage
         cell.postLabel.text = post.postText
         cell.avaImageView.image = UIImage(named: post.user.image)
         cell.avaLabel.text = post.user.name

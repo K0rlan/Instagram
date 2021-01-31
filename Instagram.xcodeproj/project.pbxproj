@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E410B99925C6E17A006B8A6C /* StoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410B99825C6E17A006B8A6C /* StoriesTableViewCell.swift */; };
+		E410B9A225C6EA1D006B8A6C /* AddNewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410B9A125C6EA1D006B8A6C /* AddNewPostViewController.swift */; };
 		E4E0350325C624CF005CFFB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E0350225C624CF005CFFB9 /* AppDelegate.swift */; };
 		E4E0350525C624CF005CFFB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E0350425C624CF005CFFB9 /* SceneDelegate.swift */; };
 		E4E0350725C624CF005CFFB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E0350625C624CF005CFFB9 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		E410B99825C6E17A006B8A6C /* StoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewCell.swift; sourceTree = "<group>"; };
+		E410B9A125C6EA1D006B8A6C /* AddNewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPostViewController.swift; sourceTree = "<group>"; };
 		E4E034FF25C624CF005CFFB9 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E0350225C624CF005CFFB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4E0350425C624CF005CFFB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				E4E0350D25C624CF005CFFB9 /* LaunchScreen.storyboard */,
 				E4E0351025C624CF005CFFB9 /* Info.plist */,
 				E4E0351F25C628B4005CFFB9 /* Models.swift */,
+				E410B9A125C6EA1D006B8A6C /* AddNewPostViewController.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			files = (
 				E4E0352325C62CDC005CFFB9 /* StoriesCollectionViewCell.swift in Sources */,
 				E410B99925C6E17A006B8A6C /* StoriesTableViewCell.swift in Sources */,
+				E410B9A225C6EA1D006B8A6C /* AddNewPostViewController.swift in Sources */,
 				E4E0350725C624CF005CFFB9 /* ViewController.swift in Sources */,
 				E4E0350325C624CF005CFFB9 /* AppDelegate.swift in Sources */,
 				E4E0351D25C62666005CFFB9 /* NavigationBarView.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Stories{
     var name: String
@@ -15,15 +16,23 @@ struct Stories{
 
 struct Posts {
     var user: Stories
-    var postImage: String
+    var postImage: UIImage
     var postText: String
     var likes: Int
     
-    init(user: Stories, postImage: String, postText: String) {
+    init(user: Stories, postString: String, postText: String) {
         self.user = user
-        self.postImage = postImage
+        self.postImage = UIImage(imageLiteralResourceName: postString)
         self.postText = postText
         self.likes = Int.random(in: 1..<1000)
     }
     
+    init(user: Stories, postImage: UIImage, postText: String) {
+        self.user = user
+        self.postImage = postImage
+        self.postText = postText
+        self.likes = 0
+    }
+    
 }
+
