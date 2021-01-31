@@ -17,6 +17,7 @@
 		E4E0351D25C62666005CFFB9 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E0351C25C62666005CFFB9 /* NavigationBarView.swift */; };
 		E4E0352025C628B4005CFFB9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E0351F25C628B4005CFFB9 /* Models.swift */; };
 		E4E0352325C62CDC005CFFB9 /* StoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E0352225C62CDC005CFFB9 /* StoriesCollectionViewCell.swift */; };
+		E4E0352725C63B9C005CFFB9 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E0352625C63B9C005CFFB9 /* PostsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E4E0351C25C62666005CFFB9 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		E4E0351F25C628B4005CFFB9 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		E4E0352225C62CDC005CFFB9 /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		E4E0352625C63B9C005CFFB9 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				E4E0350425C624CF005CFFB9 /* SceneDelegate.swift */,
 				E4E0350625C624CF005CFFB9 /* ViewController.swift */,
 				E4E0350825C624CF005CFFB9 /* Main.storyboard */,
+				E4E0352625C63B9C005CFFB9 /* PostsTableViewCell.swift */,
 				E4E0352225C62CDC005CFFB9 /* StoriesCollectionViewCell.swift */,
 				E4E0350B25C624CF005CFFB9 /* Assets.xcassets */,
 				E4E0350D25C624CF005CFFB9 /* LaunchScreen.storyboard */,
@@ -163,6 +166,7 @@
 				E4E0350325C624CF005CFFB9 /* AppDelegate.swift in Sources */,
 				E4E0351D25C62666005CFFB9 /* NavigationBarView.swift in Sources */,
 				E4E0350525C624CF005CFFB9 /* SceneDelegate.swift in Sources */,
+				E4E0352725C63B9C005CFFB9 /* PostsTableViewCell.swift in Sources */,
 				E4E0352025C628B4005CFFB9 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
